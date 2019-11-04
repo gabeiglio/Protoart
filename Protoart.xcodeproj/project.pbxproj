@@ -15,7 +15,6 @@
 		009FA5402363F6B700E3324F /* SCNArtworkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */; };
 		009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */; };
 		00BEB52E236B6095008CC03D /* GallleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB52D236B6095008CC03D /* GallleryViewController.swift */; };
-		00BEB530236B60ED008CC03D /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB52F236B60ED008CC03D /* PinterestLayout.swift */; };
 		00BEB532236B6131008CC03D /* ArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */; };
 		00DB5100235E58A700925ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DB50FF235E58A700925ADC /* Assets.xcassets */; };
 		00DB5103235E58A700925ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DB5101235E58A700925ADC /* LaunchScreen.storyboard */; };
@@ -31,7 +30,6 @@
 		009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNArtworkNode.swift; sourceTree = "<group>"; };
 		009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAugmentedRealityConfig.swift; sourceTree = "<group>"; };
 		00BEB52D236B6095008CC03D /* GallleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallleryViewController.swift; sourceTree = "<group>"; };
-		00BEB52F236B60ED008CC03D /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewCell.swift; sourceTree = "<group>"; };
 		00DB50F3235E58A300925ADC /* Protoart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DB50FF235E58A700925ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				004649EA2360D36600B58D72 /* View */,
 				004649E92360D35B00B58D72 /* Controller */,
 				00DB510A235E590800925ADC /* Util */,
-				00BEB52F236B60ED008CC03D /* PinterestLayout.swift */,
 			);
 			path = Protoart;
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BEB530236B60ED008CC03D /* PinterestLayout.swift in Sources */,
 				001B9AFA2369303100512DD4 /* AppDelegate.swift in Sources */,
 				008B913E236B3E5100B2163F /* Art.swift in Sources */,
 				009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */,

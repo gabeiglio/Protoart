@@ -387,13 +387,16 @@ extension ARInteractionController {
     
     internal func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor, planeAnchor.alignment == .horizontal, self.invisibleFloors.count == 0 else { return }
-        //if self.state == .launching { self.state = .detectedFloor }
         
         //Create an anchor node, which can get moved around as we become more sure of where the plane actually is
         let wallNode = self.invisibleWallNodeForPlaneAnchor(planeAnchor: planeAnchor)
         node.addChildNode(wallNode)
         self.invisibleFloors.append(wallNode)
         
-        if self.state == .launching { self.setState(state: .detectedFloor)}
+        if self.state == .launching {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.setState(state: .detectedFloor)
+            }
+        }
     }
 }
