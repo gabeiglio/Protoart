@@ -40,9 +40,7 @@ class ARInteractionController: NSObject, ARSCNViewDelegate, ARSessionDelegate {
     private let delegate: ARVIRDelegate
     private let config: ARAugmentedRealityConfig
     
-    //Mark -- Public
-    public var state: ARInteractionMode = .launching
-    
+    private var state: ARInteractionMode = .launching    
     private var pointCloudNode: SCNNode?
     
     private var detectedPlanes = [SCNNode]()
