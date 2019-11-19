@@ -14,28 +14,32 @@
 		009FA53E2363D08E00E3324F /* ARSCNWallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */; };
 		009FA5402363F6B700E3324F /* SCNArtworkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */; };
 		009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */; };
-		00BEB52E236B6095008CC03D /* GallleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB52D236B6095008CC03D /* GallleryViewController.swift */; };
+		00A733F12381D48600CEDA51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A733F02381D48600CEDA51 /* MainViewController.swift */; };
 		00BEB532236B6131008CC03D /* ArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */; };
 		00DB5100235E58A700925ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DB50FF235E58A700925ADC /* Assets.xcassets */; };
 		00DB5103235E58A700925ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DB5101235E58A700925ADC /* LaunchScreen.storyboard */; };
 		00DB510C235E5A3000925ADC /* PreviewViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */; };
+		9746FD55D7F5846A8F8903BE /* Pods_Protoart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CEF2E1AEE51C5E42859E61 /* Pods_Protoart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		001B9AF92369303100512DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00478B9709B3B74BA11866F3 /* Pods-Protoart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protoart.debug.xcconfig"; path = "Target Support Files/Pods-Protoart/Pods-Protoart.debug.xcconfig"; sourceTree = "<group>"; };
 		008B913D236B3E5100B2163F /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
 		0094547F236F46AC00BE6024 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		009FA53B2363B2E700E3324F /* ARInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARInteractionController.swift; sourceTree = "<group>"; };
 		009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNWallNode.swift; sourceTree = "<group>"; };
 		009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNArtworkNode.swift; sourceTree = "<group>"; };
 		009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAugmentedRealityConfig.swift; sourceTree = "<group>"; };
-		00BEB52D236B6095008CC03D /* GallleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallleryViewController.swift; sourceTree = "<group>"; };
+		00A733F02381D48600CEDA51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewCell.swift; sourceTree = "<group>"; };
 		00DB50F3235E58A300925ADC /* Protoart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DB50FF235E58A700925ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00DB5102235E58A700925ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00DB5104235E58A700925ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewContoller.swift; sourceTree = "<group>"; };
+		38CEF2E1AEE51C5E42859E61 /* Pods_Protoart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Protoart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7600445A7E5F824EADA31C /* Pods-Protoart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protoart.release.xcconfig"; path = "Target Support Files/Pods-Protoart/Pods-Protoart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9746FD55D7F5846A8F8903BE /* Pods_Protoart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +57,8 @@
 		004649E92360D35B00B58D72 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				00BEB52D236B6095008CC03D /* GallleryViewController.swift */,
-				00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */,
-				009FA53B2363B2E700E3324F /* ARInteractionController.swift */,
+				00A733F02381D48600CEDA51 /* MainViewController.swift */,
+				00E776672381DF5A00C969E2 /* Augmented Reality */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -72,10 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				008B913D236B3E5100B2163F /* Art.swift */,
+				009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */,
 				009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */,
 				009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00A733EF2380C50300CEDA51 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		00DB50EA235E58A300925ADC = {
@@ -83,6 +95,8 @@
 			children = (
 				00DB50F5235E58A300925ADC /* Protoart */,
 				00DB50F4235E58A300925ADC /* Products */,
+				D0D16CFC02D222C85220CC61 /* Pods */,
+				50E08C827A39C2F8CF9CCF99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				001B9AF92369303100512DD4 /* AppDelegate.swift */,
-				009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */,
+				00A733EF2380C50300CEDA51 /* Network */,
 				004649EB2360D36B00B58D72 /* Model */,
 				004649EA2360D36600B58D72 /* View */,
 				004649E92360D35B00B58D72 /* Controller */,
@@ -117,6 +131,33 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		00E776672381DF5A00C969E2 /* Augmented Reality */ = {
+			isa = PBXGroup;
+			children = (
+				00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */,
+				009FA53B2363B2E700E3324F /* ARInteractionController.swift */,
+			);
+			path = "Augmented Reality";
+			sourceTree = "<group>";
+		};
+		50E08C827A39C2F8CF9CCF99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38CEF2E1AEE51C5E42859E61 /* Pods_Protoart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0D16CFC02D222C85220CC61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00478B9709B3B74BA11866F3 /* Pods-Protoart.debug.xcconfig */,
+				BF7600445A7E5F824EADA31C /* Pods-Protoart.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DB5107235E58A700925ADC /* Build configuration list for PBXNativeTarget "Protoart" */;
 			buildPhases = (
+				297C01D944AEBBC0F3E53CEA /* [CP] Check Pods Manifest.lock */,
 				00DB50EF235E58A300925ADC /* Sources */,
 				00DB50F0235E58A300925ADC /* Frameworks */,
 				00DB50F1235E58A300925ADC /* Resources */,
+				17FC66954755C6911AC32320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +225,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17FC66954755C6911AC32320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Protoart/Pods-Protoart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Protoart/Pods-Protoart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Protoart/Pods-Protoart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		297C01D944AEBBC0F3E53CEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Protoart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00DB50EF235E58A300925ADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,10 +276,10 @@
 				008B913E236B3E5100B2163F /* Art.swift in Sources */,
 				009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */,
 				00DB510C235E5A3000925ADC /* PreviewViewContoller.swift in Sources */,
-				00BEB52E236B6095008CC03D /* GallleryViewController.swift in Sources */,
 				009FA53E2363D08E00E3324F /* ARSCNWallNode.swift in Sources */,
 				00945480236F46AC00BE6024 /* TutorialView.swift in Sources */,
 				009FA53C2363B2E700E3324F /* ARInteractionController.swift in Sources */,
+				00A733F12381D48600CEDA51 /* MainViewController.swift in Sources */,
 				009FA5402363F6B700E3324F /* SCNArtworkNode.swift in Sources */,
 				00BEB532236B6131008CC03D /* ArtCollectionViewCell.swift in Sources */,
 			);
@@ -330,6 +415,7 @@
 		};
 		00DB5108235E58A700925ADC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00478B9709B3B74BA11866F3 /* Pods-Protoart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -349,6 +435,7 @@
 		};
 		00DB5109235E58A700925ADC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF7600445A7E5F824EADA31C /* Pods-Protoart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
