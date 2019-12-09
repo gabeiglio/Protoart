@@ -7,19 +7,19 @@
 //
 
 import UIKit
-import collection_view_layouts
 
 class MainViewController: UIViewController {
-    
     
     private let data = Art.getArt()
     //private let searchBarController = UISearchController(searchResultsController: nil)
     
     private lazy var collectionView: UICollectionView = {
-        let layout: BaseLayout = FlickrLayout()
-        layout.delegate = self
-        layout.cellsPadding = ItemsPadding(horizontal: 8, vertical: 8)
-
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: self.view.frame.size.width / 2 - 8, height: 200)
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 1
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .groupTableViewBackground
@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
 }
 
 //Implement Collection View Delegate and Datasource
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LayoutDelegate {
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.data.count
     }
@@ -51,11 +51,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    internal func cellSize(indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 2 - 10, height: 300)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = PreviewViewController()
         controller.initWith(config: ARAugmentedRealityConfig(with: self.data[indexPath.row].image, size: self.data[indexPath.row].size))
         self.navigationController?.pushViewController(controller, animated: true)
