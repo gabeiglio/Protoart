@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		001B9AFA2369303100512DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B9AF92369303100512DD4 /* AppDelegate.swift */; };
-		008B913E236B3E5100B2163F /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008B913D236B3E5100B2163F /* Art.swift */; };
+		003B434D23A01C96001727C1 /* NetworkPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */; };
+		006781DC239F5C230024C2FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006781DB239F5C230024C2FE /* User.swift */; };
 		00945480236F46AC00BE6024 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094547F236F46AC00BE6024 /* TutorialView.swift */; };
+		009F9FE2239FFB6B004893F5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F9FE1239FFB6B004893F5 /* Photo.swift */; };
+		009F9FE4239FFDD2004893F5 /* Sponsorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F9FE3239FFDD2004893F5 /* Sponsorship.swift */; };
 		009FA53C2363B2E700E3324F /* ARInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53B2363B2E700E3324F /* ARInteractionController.swift */; };
 		009FA53E2363D08E00E3324F /* ARSCNWallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */; };
 		009FA5402363F6B700E3324F /* SCNArtworkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */; };
 		009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */; };
 		00A733F12381D48600CEDA51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A733F02381D48600CEDA51 /* MainViewController.swift */; };
 		00BEB532236B6131008CC03D /* ArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */; };
+		00C2E06D239EE8D100ED690C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E06C239EE8D100ED690C /* Network.swift */; };
 		00DB5100235E58A700925ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DB50FF235E58A700925ADC /* Assets.xcassets */; };
 		00DB5103235E58A700925ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DB5101235E58A700925ADC /* LaunchScreen.storyboard */; };
 		00DB510C235E5A3000925ADC /* PreviewViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */; };
@@ -23,14 +27,18 @@
 
 /* Begin PBXFileReference section */
 		001B9AF92369303100512DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		008B913D236B3E5100B2163F /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
+		003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPrivateExtension.swift; sourceTree = "<group>"; };
+		006781DB239F5C230024C2FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0094547F236F46AC00BE6024 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		009F9FE1239FFB6B004893F5 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		009F9FE3239FFDD2004893F5 /* Sponsorship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sponsorship.swift; sourceTree = "<group>"; };
 		009FA53B2363B2E700E3324F /* ARInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARInteractionController.swift; sourceTree = "<group>"; };
 		009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNWallNode.swift; sourceTree = "<group>"; };
 		009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNArtworkNode.swift; sourceTree = "<group>"; };
 		009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAugmentedRealityConfig.swift; sourceTree = "<group>"; };
 		00A733F02381D48600CEDA51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00BEB531236B6131008CC03D /* ArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewCell.swift; sourceTree = "<group>"; };
+		00C2E06C239EE8D100ED690C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		00DB50F3235E58A300925ADC /* Protoart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DB50FF235E58A700925ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00DB5102235E58A700925ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,19 +78,21 @@
 		004649EB2360D36B00B58D72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				008B913D236B3E5100B2163F /* Art.swift */,
-				009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */,
-				009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */,
-				009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */,
+				009F9FE1239FFB6B004893F5 /* Photo.swift */,
+				006781DB239F5C230024C2FE /* User.swift */,
+				009F9FE3239FFDD2004893F5 /* Sponsorship.swift */,
+				00FD7560239EF3D1001F14D7 /* Augmented Reality */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		00A733EF2380C50300CEDA51 /* Network */ = {
+		00C2E06E239EE8D900ED690C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				00C2E06C239EE8D100ED690C /* Network.swift */,
+				003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */,
 			);
-			path = Network;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		00DB50EA235E58A300925ADC = {
@@ -105,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				001B9AF92369303100512DD4 /* AppDelegate.swift */,
-				00A733EF2380C50300CEDA51 /* Network */,
+				00C2E06E239EE8D900ED690C /* Networking */,
 				004649EB2360D36B00B58D72 /* Model */,
 				004649EA2360D36600B58D72 /* View */,
 				004649E92360D35B00B58D72 /* Controller */,
@@ -129,6 +139,16 @@
 			children = (
 				00DB510B235E5A3000925ADC /* PreviewViewContoller.swift */,
 				009FA53B2363B2E700E3324F /* ARInteractionController.swift */,
+			);
+			path = "Augmented Reality";
+			sourceTree = "<group>";
+		};
+		00FD7560239EF3D1001F14D7 /* Augmented Reality */ = {
+			isa = PBXGroup;
+			children = (
+				009FA5412363F6F500E3324F /* ARAugmentedRealityConfig.swift */,
+				009FA53D2363D08E00E3324F /* ARSCNWallNode.swift */,
+				009FA53F2363F6B700E3324F /* SCNArtworkNode.swift */,
 			);
 			path = "Augmented Reality";
 			sourceTree = "<group>";
@@ -204,14 +224,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				001B9AFA2369303100512DD4 /* AppDelegate.swift in Sources */,
-				008B913E236B3E5100B2163F /* Art.swift in Sources */,
 				009FA5422363F6F500E3324F /* ARAugmentedRealityConfig.swift in Sources */,
 				00DB510C235E5A3000925ADC /* PreviewViewContoller.swift in Sources */,
 				009FA53E2363D08E00E3324F /* ARSCNWallNode.swift in Sources */,
+				00C2E06D239EE8D100ED690C /* Network.swift in Sources */,
+				009F9FE2239FFB6B004893F5 /* Photo.swift in Sources */,
 				00945480236F46AC00BE6024 /* TutorialView.swift in Sources */,
 				009FA53C2363B2E700E3324F /* ARInteractionController.swift in Sources */,
+				003B434D23A01C96001727C1 /* NetworkPrivateExtension.swift in Sources */,
+				006781DC239F5C230024C2FE /* User.swift in Sources */,
 				00A733F12381D48600CEDA51 /* MainViewController.swift in Sources */,
 				009FA5402363F6B700E3324F /* SCNArtworkNode.swift in Sources */,
+				009F9FE4239FFDD2004893F5 /* Sponsorship.swift in Sources */,
 				00BEB532236B6131008CC03D /* ArtCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,14 +10,13 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private let data = Art.getArt()
-    //private let searchBarController = UISearchController(searchResultsController: nil)
+    private var data = [Photo]()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: self.view.frame.size.width / 2 - 8, height: 200)
-        layout.minimumLineSpacing = 2
+        layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 1
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -32,6 +31,16 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Network.getListPhotos { (photos) in
+            guard let result = photos else { return }
+            self.data = result
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+        
         self.initialSetup()
     }
     
@@ -47,14 +56,22 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCell", for: indexPath) as? ArtCollectionViewCell else {
             fatalError("For some reasong the cell is not of type ArtCollectionViewCell")
         }
-        cell.configure(name: self.data[indexPath.row].name, image: self.data[indexPath.row].image)
+        
+        Network.downloadImage(urlString: data[indexPath.row].urls["small"]!) { (image) in
+            guard let result = image else { return }
+            
+            DispatchQueue.main.async {
+                cell.configure(name: self.data[indexPath.row].user.name, image: result)
+            }
+        }
+        
         return cell
     }
     
     internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = PreviewViewController()
-        controller.initWith(config: ARAugmentedRealityConfig(with: self.data[indexPath.row].image, size: self.data[indexPath.row].size))
-        self.navigationController?.pushViewController(controller, animated: true)
+//        let controller = PreviewViewController()
+//        controller.initWith(config: ARAugmentedRealityConfig(with: self.data[indexPath.row].image, size: self.data[indexPath.row].size))
+//        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
@@ -72,11 +89,6 @@ extension MainViewController {
         self.navigationController?.hidesBarsOnSwipe = false
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil)
 
-        //self.searchBarController.searchResultsUpdater = self
-//        self.searchBarController.hidesNavigationBarDuringPresentation = false
-//        self.searchBarController.dimsBackgroundDuringPresentation = false
-//        self.navigationItem.searchController = self.searchBarController
-        
         //Add collection View to view
         self.view.addSubview(collectionView)
         NSLayoutConstraint.activate([
