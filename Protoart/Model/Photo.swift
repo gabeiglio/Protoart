@@ -8,6 +8,14 @@
 
 import Foundation
 
+struct Wrapper: Codable {
+    let results: [Photo]
+    
+    enum CodingKeys: String, CodingKey {
+        case results = "results"
+    }
+}
+
 struct Photo: Codable {
     let id: String
     let width: Int
@@ -32,5 +40,11 @@ struct Photo: Codable {
         case links
         case categories
         case user
+    }
+}
+
+extension Int {
+    public func getSizeInMeters() -> Double {
+        return Double(self) * 0.00026
     }
 }

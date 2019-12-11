@@ -13,7 +13,7 @@ struct User: Codable {
     let username: String
     let name: String
     let firstName: String
-    let lastName: String
+    let lastName: String?
     let portfolioURL: String?
     let bio: String?
     let location: String?

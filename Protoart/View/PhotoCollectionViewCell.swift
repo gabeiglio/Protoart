@@ -1,5 +1,5 @@
 //
-//  ArtCollectionViewCell.swift
+//  PhotoCollectionViewCell.swift
 //  Protoart
 //
 //  Created by Gabriel Igliozzi on 10/31/19.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ArtCollectionViewCell: UICollectionViewCell {
+class PhotoCollectionViewCell: UICollectionViewCell {
     
-    public let artImage: UIImageView = {
+    public let photoImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -43,21 +43,21 @@ class ArtCollectionViewCell: UICollectionViewCell {
     
     public func configure(name: String, image: UIImage) {
         self.nameLabel.text = name
-        self.artImage.image = image
+        self.photoImage.image = image
     }
 }
 
 //Setup UI
-extension ArtCollectionViewCell {
+extension PhotoCollectionViewCell {
     private func setupView() {
         
         //Setup image view
-        self.addSubview(artImage)
+        self.addSubview(photoImage)
         NSLayoutConstraint.activate([
-            self.artImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            self.artImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
-            self.artImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
-            self.artImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            self.photoImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            self.photoImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
+            self.photoImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
+            self.photoImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
         
         //Setup name label

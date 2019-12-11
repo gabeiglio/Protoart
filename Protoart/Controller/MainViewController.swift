@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var data = [Photo]()
+    private var data = [Category]()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
         layout.itemSize = CGSize(width: self.view.frame.size.width / 2 - 8, height: 200)
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 1
+        layout.headerReferenceSize = CGSize(width: self.view.frame.size.width, height: 80)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,16 +26,17 @@ class MainViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.register(ArtCollectionViewCell.self, forCellWithReuseIdentifier: "artCell")
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "photoCell")
+        collectionView.register(MainHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerCell")
         return collectionView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Network.getListPhotos { (photos) in
-            guard let result = photos else { return }
-            self.data = result
+        let cat = ["Hustle": "👨🏽‍💻","Grind": "🗂","Coding": "🗄", "Office": "🖥", "Landscape":"🌎"]
+        self.getData(cat: cat) { (category) in
+            self.data.append(category)
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -44,24 +46,37 @@ class MainViewController: UIViewController {
         self.initialSetup()
     }
     
+    private func getData(cat: [String: String], completion: @escaping (Category) -> ()) {
+        for (key, value) in cat {
+            Network.getListPhotos(numberOfImages: 4, page: 1, query: key) { (photos) in
+                guard let result = photos else { return }
+                completion(Category(title: key, icon: value, photos: result))
+            }
+        }
+    }    
 }
 
 //Implement Collection View Delegate and Datasource
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    internal func numberOfSections(in collectionView: UICollectionView) -> Int {
+        self.data.count
+    }
+    
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.data.count
+        return self.data[section].photos.count
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCell", for: indexPath) as? ArtCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell else {
             fatalError("For some reasong the cell is not of type ArtCollectionViewCell")
         }
         
-        Network.downloadImage(urlString: data[indexPath.row].urls["small"]!) { (image) in
+        guard let photoPath = data[indexPath.section].photos[indexPath.row].urls["small"] else { return UICollectionViewCell() }
+        
+        Network.downloadImage(urlString: photoPath) { (image) in
             guard let result = image else { return }
-            
             DispatchQueue.main.async {
-                cell.configure(name: self.data[indexPath.row].user.name, image: result)
+                cell.configure(name: self.data[indexPath.section].photos[indexPath.row].user.name, image: result)
             }
         }
         
@@ -69,11 +84,45 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = PreviewViewController()
-//        controller.initWith(config: ARAugmentedRealityConfig(with: self.data[indexPath.row].image, size: self.data[indexPath.row].size))
-//        self.navigationController?.pushViewController(controller, animated: true)
+        let photo = self.data[indexPath.section].photos[indexPath.row]
+        guard let photoPath = photo.urls["full"] else { return }
+
+        Network.downloadImage(urlString: photoPath) { (image) in
+            guard let result = image else { return }
+            
+            DispatchQueue.main.async {
+                let controller = PreviewViewController()
+                controller.initWith(config: ARAugmentedRealityConfig(with: result, size: CGSize(width: photo.width.getSizeInMeters(), height: photo.height.getSizeInMeters())))
+                self.navigationController?.show(controller, sender: nil)
+            }
+        }
+        
     }
     
+   
+    
+}
+
+//Header UI and Delegate implementation
+extension MainViewController: MainHeaderDelegate {
+    
+    internal func seeMorePressed(key: String) {
+        let controller = MoreCollectionViewController(withSearch: key)
+        self.navigationController?.show(controller, sender: nil)
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerCell", for: indexPath) as? MainHeaderView else {
+                fatalError("Wrong header type")
+            }
+            headerView.configure(title: self.data[indexPath.section].icon + " " + self.data[indexPath.section].title, key: self.data[indexPath.section].title)
+            headerView.delegate = self
+            return headerView
+        default: assert(false, "Invalid element type")
+        }
+    }
 }
 
 //Setup any view and data here, this function will get called in viewdidload
