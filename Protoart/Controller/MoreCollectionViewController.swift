@@ -37,13 +37,17 @@ class MoreCollectionViewController: UICollectionViewController {
         Network.getListPhotos(numberOfImages: 30, page: 1, query: self.key) { (photos) in
             guard let result = photos else { return }
             self.photos = result
-            
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
         }
         
         self.setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.hidesBarsOnTap = false
     }
     
 }
@@ -98,7 +102,7 @@ extension MoreCollectionViewController {
         
         //Navigation bar
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.navigationController?.hidesBarsOnTap = false
         
         //Collection View
         self.collectionView.backgroundColor = .groupTableViewBackground

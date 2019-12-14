@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		001B9AFA2369303100512DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B9AF92369303100512DD4 /* AppDelegate.swift */; };
-		003B434D23A01C96001727C1 /* NetworkPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */; };
 		003B434F23A04556001727C1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003B434E23A04555001727C1 /* Category.swift */; };
 		003B435123A14B0F001727C1 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003B435023A14B0F001727C1 /* MainHeaderView.swift */; };
 		003B435323A15CAB001727C1 /* MoreCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003B435223A15CAA001727C1 /* MoreCollectionViewController.swift */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		001B9AF92369303100512DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPrivateExtension.swift; sourceTree = "<group>"; };
 		003B434E23A04555001727C1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		003B435023A14B0F001727C1 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		003B435223A15CAA001727C1 /* MoreCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				00C2E06C239EE8D100ED690C /* Network.swift */,
-				003B434C23A01C96001727C1 /* NetworkPrivateExtension.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 				00945480236F46AC00BE6024 /* TutorialView.swift in Sources */,
 				009FA53C2363B2E700E3324F /* ARInteractionController.swift in Sources */,
 				003B435123A14B0F001727C1 /* MainHeaderView.swift in Sources */,
-				003B434D23A01C96001727C1 /* NetworkPrivateExtension.swift in Sources */,
 				006781DC239F5C230024C2FE /* User.swift in Sources */,
 				00A733F12381D48600CEDA51 /* MainViewController.swift in Sources */,
 				003B434F23A04556001727C1 /* Category.swift in Sources */,

@@ -46,6 +46,11 @@ class MainViewController: UIViewController {
         self.initialSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.hidesBarsOnTap = false
+    }
+    
     private func getData(cat: [String: String], completion: @escaping (Category) -> ()) {
         for (key, value) in cat {
             Network.getListPhotos(numberOfImages: 4, page: 1, query: key) { (photos) in
@@ -135,7 +140,7 @@ extension MainViewController {
         
         //Navigation bar
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.navigationController?.hidesBarsOnTap = false
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil)
 
         //Add collection View to view

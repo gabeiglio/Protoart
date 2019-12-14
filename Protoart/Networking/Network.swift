@@ -8,8 +8,6 @@
 
 import UIKit
 
-//`https://api.unsplash.com/search/photos?query=${searchTerm}&page=${nextPage}&per_page=100&client_id=${UNSPLASH_ACCESS_KEY}`;
-
 class Network {
     
     //Get list of photos encoded into swift structs
@@ -56,5 +54,13 @@ class Network {
         }
         
         session.resume()
+    }
+}
+
+//Private keys
+extension Network {
+    private struct Key {
+        static let access = "fbf20b8577e20cdb74fa4b03bafabacbf60ea7e9efad51b8c3db671beabc6d00"
+        static let secret = "b668230fe1b29c0f3ee8b0368f0da95915c33c74a1192c89506e386615bf6ea4"
     }
 }
